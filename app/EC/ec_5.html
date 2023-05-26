@@ -1,0 +1,61 @@
+<html lang="ko">
+    <head> </head>
+
+    <body>
+        <!-- 
+    *************************************************
+    　　UPDATE LOG
+    *************************************************
+    No_ 수정일자　　 작성자　　 수정내용
+    01_ 2023.04.05　윤성미　:　컨벤션 세팅 시작
+    02_ 2023.04.11　고하늘　:　컨벤션 컨텐츠 작업
+
+-->
+        <div class="wrap">
+            <h2 class="depth1-tit">Tab</h2>
+            <section id="sec1" class="section">
+                <h3 class="depth2-tit">웹 접근성을 준수한 Tab 사용 규칙</h3>
+                <ol class="depth-list type-bar">
+                    <li><code>&lt;code&gt;</code> 에 role="tablist" 속성을 사용하여 탭 목록임을 명시한다.</li>
+                    <li><code>&lt;li&gt;</code>요소를 사용하여 각 탭 항목을 정의하고, role="presentation" 속성을 사용하여 목록의 항목이 탭이라는 것을 표시한다.</li>
+                    <li>버튼을 그룹핑 할 경우 role="group" 을 사용하여 그룹을 명시하는 것을 권장한다.</li>
+                    <li><code>&lt;a&gt;</code> 요소를 사용하여 탭 링크를 정의하고, role="tab" 속성을 사용하여 링크가 탭 역할을 수행함을 표시한다.</li>
+                    <li>aria-controls 속성을 사용하여 해당 탭이 제어하는 콘텐츠의 ID를 지정하고, aria-selected 속성을 사용하여 현재 선택된 탭을 표시한다.</li>
+                    <li><code>&lt;div&gt;</code> 요소를 사용하여 탭 콘텐츠를 정의하고, role="tabpanel" 속성을 사용하여 콘텐츠의 역할을 자정한다.</li>
+                    <li>각 탭 콘텐츠에는 aria-labelledby 속성을 사용하여 해당 탭의 ID를 참조하여 탭과 콘텐츠의 관계를 지정한다.</li>
+                </ol>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Cdiv%2520class%253D%2522tab-container%2522%253E%250A%2520%2520%253Cul%2520class%253D%2522tab-list%2522%2520role%253D%2522tablist%2522%253E%250A%2520%2520%2520%2520%253Cli%2520class%253D%2522tab-item%2522%2520role%253D%2522presentation%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522%2523tab1%2522%2520id%253D%2522tab1-tab%2522%2520class%253D%2522tab-link%2522%2520role%253D%2522tab%2522%2520aria-controls%253D%2522tab1%2522%2520aria-selected%253D%2522true%2522%253E%25ED%2583%25AD%25201%253C%252Fa%253E%250A%2520%2520%2520%2520%253C%252Fli%253E%250A%2520%2520%2520%2520%253Cli%2520class%253D%2522tab-item%2522%2520role%253D%2522presentation%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522%2523tab2%2522%2520id%253D%2522tab2-tab%2522%2520class%253D%2522tab-link%2522%2520role%253D%2522tab%2522%2520aria-controls%253D%2522tab2%2522%2520aria-selected%253D%2522false%2522%253E%25ED%2583%25AD%25202%253C%252Fa%253E%250A%2520%2520%2520%2520%253C%252Fli%253E%250A%2520%2520%2520%2520%253Cli%2520class%253D%2522tab-item%2522%2520role%253D%2522presentation%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Ca%2520href%253D%2522%2523tab3%2522%2520id%253D%2522tab3-tab%2522%2520class%253D%2522tab-link%2522%2520role%253D%2522tab%2522%2520aria-controls%253D%2522tab3%2522%2520aria-selected%253D%2522false%2522%253E%25ED%2583%25AD%25203%253C%252Fa%253E%250A%2520%2520%2520%2520%253C%252Fli%253E%250A%2520%2520%253C%252Ful%253E%250A%2520%2520%253Cdiv%2520class%253D%2522tab-content%2522%253E%250A%2520%2520%2520%2520%253Cdiv%2520id%253D%2522tab1%2522%2520class%253D%2522tab-pane%2522%2520role%253D%2522tabpanel%2522%2520aria-labelledby%253D%2522tab1-tab%2522%2520aria-hidden%253D%2522false%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cp%253E%25ED%2583%25AD%25201%25EC%259D%2598%2520%25EB%2582%25B4%25EC%259A%25A9%253C%252Fp%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520id%253D%2522tab2%2522%2520class%253D%2522tab-pane%2522%2520role%253D%2522tabpanel%2522%2520aria-labelledby%253D%2522tab2-tab%2522%2520aria-hidden%253D%2522true%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cp%253E%25ED%2583%25AD%25202%25EC%259D%2598%2520%25EB%2582%25B4%25EC%259A%25A9%253C%252Fp%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cdiv%2520id%253D%2522tab3%2522%2520class%253D%2522tab-pane%2522%2520role%253D%2522tabpanel%2522%2520aria-labelledby%253D%2522tab3-tab%2522%2520aria-hidden%253D%2522true%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cp%253E%25ED%2583%25AD%25203%25EC%259D%2598%2520%25EB%2582%25B4%25EC%259A%25A9%253C%252Fp%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253C%252Fdiv%253E%250A%253C%252Fdiv%253E"
+                    style="width: 100%; height: 674px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=javascript&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Cscript%253E%250A%2520%2520%252F%252F%2520%25ED%2583%25AD%2520%25ED%2581%25B4%25EB%25A6%25AD%2520%25EC%259D%25B4%25EB%25B2%25A4%25ED%258A%25B8%2520%25ED%2595%25B8%25EB%2593%25A4%25EB%259F%25AC%250A%2520%2520function%2520onTabClick%28event%29%2520%257B%250A%2520%2520%2520%2520event.preventDefault%28%29%253B%2520%252F%252F%2520%25EA%25B8%25B0%25EB%25B3%25B8%2520%25ED%2581%25B4%25EB%25A6%25AD%2520%25EB%258F%2599%25EC%259E%2591%2520%25EC%25B0%25A8%25EB%258B%25A8%250A%2520%2520%2520%2520let%2520targetTab%2520%253D%2520event.target%253B%250A%2520%2520%2520%2520let%2520tabId%2520%253D%2520targetTab.getAttribute%28%27href%27%29%253B%2520%252F%252F%2520%25ED%2583%25AD%2520%25EB%25A7%2581%25ED%2581%25AC%25EC%259D%2598%2520href%2520%25EC%2586%258D%25EC%2584%25B1%25EA%25B0%2592%25EC%259C%25BC%25EB%25A1%259C%2520%25ED%2583%25AD%2520%25EC%25BD%2598%25ED%2585%2590%25EC%25B8%25A0%25EC%259D%2598%2520ID%2520%25ED%259A%258D%25EB%2593%259D%250A%2520%2520%2520%2520let%2520tabPanel%2520%253D%2520document.querySelector%28tabId%29%253B%2520%252F%252F%2520ID%25EB%25A1%259C%2520%25ED%2583%25AD%2520%25EC%25BD%2598%25ED%2585%2590%25EC%25B8%25A0%2520%25EC%259A%2594%25EC%2586%258C%2520%25EC%25B0%25BE%25EA%25B8%25B0%250A%2520%2520%2520%2520let%2520tabList%2520%253D%2520targetTab.parentNode.parentNode%253B%2520%252F%252F%2520%25ED%2583%25AD%2520%25EB%25AA%25A9%25EB%25A1%259D%2520%25EC%259A%2594%25EC%2586%258C%2520%25EC%25B0%25BE%25EA%25B8%25B0%250A%2520%2520%2520%2520let%2520tabs%2520%253D%2520tabList.querySelectorAll%28%27.tab-link%27%29%253B%2520%252F%252F%2520%25ED%2583%25AD%2520%25EB%25AA%25A9%25EB%25A1%259D%25EC%259D%2598%2520%25EB%25AA%25A8%25EB%2593%25A0%2520%25ED%2583%25AD%2520%25EB%25A7%2581%25ED%2581%25AC%2520%25EC%259A%2594%25EC%2586%258C%2520%25EC%25B0%25BE%25EA%25B8%25B0%250A%250A%2520%2520%2520%2520%252F%252F%2520%25EB%25AA%25A8%25EB%2593%25A0%2520%25ED%2583%25AD%2520%25EB%25A7%2581%25ED%2581%25AC%25EC%2599%2580%2520%25ED%2583%25AD%2520%25EC%25BD%2598%25ED%2585%2590%25EC%25B8%25A0%25EC%259D%2598%2520%25EC%2584%25A0%25ED%2583%259D%2520%25EC%2583%2581%25ED%2583%259C%2520%25EC%25B4%2588%25EA%25B8%25B0%25ED%2599%2594%250A%2520%2520%2520%2520tabs.forEach%28function%2520%28tab%29%2520%257B%250A%2520%2520%2520%2520%2520%2520tab.setAttribute%28%27aria-selected%27%252C%2520%27false%27%29%253B%250A%2520%2520%2520%2520%257D%29%253B%250A%2520%2520%2520%2520document.querySelectorAll%28%27.tab-pane%27%29.forEach%28function%2520%28panel%29%2520%257B%250A%2520%2520%2520%2520%2520%2520panel.setAttribute%28%27aria-hidden%27%252C%2520%27true%27%29%253B%250A%2520%2520%2520%2520%257D%29%253B%250A%250A%2520%2520%2520%2520%252F%252F%2520%25EC%2584%25A0%25ED%2583%259D%25EB%2590%259C%2520%25ED%2583%25AD%25EA%25B3%25BC%2520%25ED%2583%25AD%2520%25EC%25BD%2598%25ED%2585%2590%25EC%25B8%25A0%25EC%259D%2598%2520%25EC%2584%25A0%25ED%2583%259D%2520%25EC%2583%2581%25ED%2583%259C%2520%25EB%25B3%2580%25EA%25B2%25BD%250A%2520%2520%2520%2520targetTab.setAttribute%28%27aria-selected%27%252C%2520%27true%27%29%253B%250A%2520%2520%2520%2520tabPanel.setAttribute%28%27aria-hidden%27%252C%2520%27false%27%29%253B%250A%2520%2520%257D%250A%250A%2520%2520%252F%252F%2520%25ED%2583%25AD%2520%25ED%2581%25B4%25EB%25A6%25AD%2520%25EC%259D%25B4%25EB%25B2%25A4%25ED%258A%25B8%2520%25EB%25A6%25AC%25EC%258A%25A4%25EB%2584%2588%2520%25EB%2593%25B1%25EB%25A1%259D%250A%2520%2520document.querySelectorAll%28%27.tab-link%27%29.forEach%28function%2520%28tab%29%2520%257B%250A%2520%2520%2520%2520tab.addEventListener%28%27click%27%252C%2520onTabClick%29%253B%250A%2520%2520%257D%29%253B%250A%253C%252Fscript%253E"
+                    style="width: 100%; height: 694px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <ul id="aside-inner" class="aside-inner">
+                <li><a href="#sec1">Tab 사용 규칙</a></li>
+            </ul>
+        </div>
+        <!-- Documentation information -->
+        <div class="cpcv-doc-info">
+            <ul>
+                <li>
+                    <p><strong>Published on:</strong></p>
+                    <p>2023년 4월 5일</p>
+                </li>
+                <li>
+                    <vp><strong>Writted by:</strong></vp>
+                    <p>pj.yyxxmm</p>
+                </li>
+            </ul>
+        </div>
+        <!-- // Documentation information -->
+        <!-- 예시 마크업에서의 탭 UI 스크립트 -->
+        <!-- 예시 마크업에서의 탭 UI 스크립트 -->
+    </body>
+</html>

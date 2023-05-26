@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.mt0{margin-top: 0px !important;}
+.mt10{margin-top: 10px !important;}
+.mt20{margin-top: 20px !important;}
+.fs-sm{font-size: 0.88rem !important;}
+#cpcv-pagecall{scroll-behavior: smooth; background: #fafafa;}
+#aside-inner{display: none;}
+.aside-inner li {line-height: 2; word-break: keep-all;}
+.aside-inner li a{color: #44576c;color: #00d6c0;-webkit-font-smoothing: antialiased;font-size: 13px;font-weight: 600;line-height: 1.5;letter-spacing: -0.009em;}
+.aside-inner a{transition: background-color 0.3s ease-out;}
+.aside-inner a:hover,.aside-inner a:focus {background-color: rgb(27 147 101 / 24%);}
+
+.wrap{padding-bottom: 80px;}
+.wrap .section{padding: 25px 20px;border-top: 10px solid #00d6c0;}
+.wrap .section + .section{margin-top: 40px; padding-top: 40px;}
+.wrap .section iframe{margin-top: 30px;}
+.wrap .section iframe + .info-txt{margin-top: 20px;}
+.wrap .section ol{max-width: 1000px; margin: 0; word-break: keep-all;}
+.wrap .section code{background-color: #555;color: #dcffc1;font-size: 13px;}
+.wrap .section .inner-group + .inner-group{border-top: 1px dashed #666; margin-top: 40px; padding-top: 40px;}
+
+.wrap .section .depth2-tit{margin-top: 0;}
+.wrap .section .depth2-tit + iframe{margin-top: 12px;}
+.wrap .section .info-txt{position: relative; max-width: 1000px; margin: 0 0 0 20px; word-break: keep-all;font-weight: 900;font-size: 1.1rem;}
+.wrap .section .info-txt:before{position: absolute; top: 0; left: -15px;}
+.wrap .section .info-txt + *:not(iframe) {background-color: #eee;padding: 10px 0;}
+.wrap .section .info-txt + .info-txt{margin-top: 8px;}
+.wrap .section .info-txt + .depth-list{margin-top: 10px;padding-left: 30px;width: 100%;}
+.wrap .section .info-txt.type-bar:before{content: '-';}
+.wrap .section .info-txt.type-bar + iframe{margin-top: 15px;}
+.wrap .section .info-txt.type-bar + table{margin-top: 15px;}
+.wrap .section .info-txt.type-dot:before{content: '\00B7'; font-size: 1.2rem;}
+.wrap .section .info-txt.type-ref{margin-top: 18px; margin-left: 25px; font-size: 0.88rem;}
+.wrap .section .info-txt.type-ref:before{content: '!'; color: #ff0000; font-weight: 700;}
+.wrap .section .info-txt.type-ref .ref-stie{margin-top: 0;}
+
+.wrap .section .depth-list li{font-size: 0.9rem;}
+.wrap .section .depth-list li img{width: 70%;}
+.wrap .section .depth-list li + li{margin-top: 10px;}
+.wrap .section .depth-list.type-bar{padding-left: 0;}
+.wrap .section .depth-list.type-bar.sm{margin-left: 20px;}
+.wrap .section .depth-list.type-bar li{position: relative; margin-left: 20px;}
+.wrap .section .depth-list.type-bar li::before{content: '-'; position: absolute; top: 0; left: -15px;}
+.wrap .section .depth-list.type-num li{padding-left: 10px;}
+.wrap .section .depth-list.type-num li::marker{content: counter(list-item) '.';}
+.wrap .section .depth-list +.info-txt{margin-top: 18px;}
+
+
+.wrap .section .ex{display: block; font-size: 0.95rem;}
+.wrap .section .ex::before{content: 'ex)'; color: #ff0000;}
+.wrap .section .hl{font-weight: 500; background-color: rgb(27 147 101 / 24%);}
+.wrap .section .ex-box{background-color: #f6f6f6; min-height: 100px; padding: 20px 10px; margin: 10px 28px 0; box-sizing: border-box;}
+.wrap .section .ex-box code{display: block; line-height: 2;}
+.wrap .section .ex-box code + code{padding-top: 8px; word-break: break-all;}
+
+.wrap .section table{margin-top: 30px; word-break: break-all; font-size: 0.88rem; text-align: center;}
+.wrap .section table .ex{font-size: 0.88rem;}
+.wrap .section table span{all: unset; display: block;}
+.wrap .section table th{background-color: #fcfcfc;}
+.wrap .section table td, .wrap .section table th + th{border-left: 1px solid #ddd;}
+.wrap .section table th, .wrap .section table td{padding: 8px;word-break: break-word;}
+.wrap .section table tr + tr{border-top: 1px solid #ddd;}
+.wrap .section table thead{background-color: #fcfcfc; border: 1px solid #ddd;}
+.wrap .section table tbody,.wrap .section table tfoot{border: 1px solid #ddd;}
+
+.wrap .section .txt-bar{position: relative; padding-right: 20px;}
+.wrap .section .txt-bar::before{content: ''; position: absolute; top: 50%; right: 10px; width: 1px; height: 12px; background-color: #999; bottom: 0; transform: translateY(-50%);}
+.wrap .section .ref-stie{display: inline-block; margin-top: 20px;}
+.wrap .section .ref-stie a{border-bottom: 1px dashed; font-size: 0.88rem;}
+
+.wrap.web-access-wrap .info-txt.txt-green{color: #005b38; margin-left: 0;}
+.wrap.web-access-wrap .info-txt.fs-sm{margin-left: 20px; color: #000;}
+
+

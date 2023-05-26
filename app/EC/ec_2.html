@@ -1,0 +1,83 @@
+<html lang="ko">
+    <head> </head>
+
+    <body>
+        <!-- 
+    *************************************************
+    　　UPDATE LOG
+    *************************************************
+    No_ 수정일자　　 작성자　　 수정내용
+    01_ 2023.04.05　윤성미　:　컨벤션 세팅 시작
+    02_ 2023.04.11　고하늘　:　컨벤션 컨텐츠 작업
+
+-->
+        <div class="wrap">
+            <h2 class="depth1-tit">table</h2>
+            <section id="sec1" class="section">
+                <h3 class="depth2-tit">기본규칙</h3>
+                <ol class="depth-list type-bar">
+                    <li><code>&lt;caption&gt;</code> 태그를 사용 하여 테이블의 캡션을 정의한다.</li>
+                    <li><code>&lt;colgroup&gt;</code> 태그를 사용하여 col 의 width를 조정할 경우, col의 총 합이 100%가 되어야 한다.</li>
+                    <li><code>&lt;th&gt;</code> 태그에는 <code>scope</code> 속성을 사용하여 헤더 셀의 범위<code>(col, row, colgroup, rowgroup)</code>를 명시한다.</li>
+                </ol>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Ctable%253E%250A%2520%2520%253Ccaption%253E%25ED%2591%259C%25EC%259D%2598%2520%25EC%25A0%259C%25EB%25AA%25A9%253C%252Fcaption%253E%250A%2520%2520%253Ccolgroup%253E%250A%2520%2520%2520%2520%253Ccol%2520style%253D%2522width%253A%252025%2525%253B%2522%253E%250A%2520%2520%2520%2520%253Ccol%2520style%253D%2522width%253A%252025%2525%253B%2522%253E%250A%2520%2520%2520%2520%253Ccol%2520style%253D%2522width%253A%252050%2525%253B%2522%253E%250A%2520%2520%253C%252Fcolgroup%253E%250A%2520%2520%253Cthead%253E%250A%2520%2520%2520%2520%253Ctr%253E%250A%2520%2520%2520%2520%2520%2520%253Cth%2520scope%253D%2522col%2522%253E%25EC%2597%25B4%25201%253C%252Fth%253E%250A%2520%2520%2520%2520%2520%2520%253Cth%2520scope%253D%2522col%2522%253E%25EC%2597%25B4%25202%253C%252Fth%253E%250A%2520%2520%2520%2520%2520%2520%253Cth%2520scope%253D%2522col%2522%253E%25EC%2597%25B4%25203%253C%252Fth%253E%250A%2520%2520%2520%2520%253C%252Ftr%253E%250A%2520%2520%253C%252Fthead%253E%250A%2520%2520%253Ctbody%253E%250A%2520%2520%2520%2520%253Ctr%253E%250A%2520%2520%2520%2520%2520%2520%253Cth%2520scope%253D%2522row%2522%253E%25ED%2596%2589%25201%253C%252Fth%253E%250A%2520%2520%2520%2520%2520%2520%253Ctd%253E%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%25201%253C%252Ftd%253E%250A%2520%2520%2520%2520%2520%2520%253Ctd%253E%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%25202%253C%252Ftd%253E%250A%2520%2520%2520%2520%253C%252Ftr%253E%250A%2520%2520%2520%2520%253Ctr%253E%250A%2520%2520%2520%2520%2520%2520%253Cth%2520scope%253D%2522row%2522%253E%25ED%2596%2589%25202%253C%252Fth%253E%250A%2520%2520%2520%2520%2520%2520%253Ctd%253E%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%25203%253C%252Ftd%253E%250A%2520%2520%2520%2520%2520%2520%253Ctd%253E%25EB%258D%25B0%25EC%259D%25B4%25ED%2584%25B0%25204%253C%252Ftd%253E%250A%2520%2520%2520%2520%253C%252Ftr%253E%250A%2520%2520%253C%252Ftbody%253E%250A%2520%2520%253Ctfoot%253E%250A%2520%2520%2520%2520%253Ctr%253E%250A%2520%2520%2520%2520%2520%2520%253Ctd%2520colspan%253D%25223%2522%253E%25ED%2591%25B8%25ED%2584%25B0%253C%252Ftd%253E%250A%2520%2520%2520%2520%253C%252Ftr%253E%250A%2520%2520%253C%252Ftfoot%253E%250A%253C%252Ftable%253E"
+                    style="width: 100%; height: 715px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+                <table>
+                    <caption>
+                        표의 제목
+                    </caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 50%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">열 1</th>
+                            <th scope="col">열 2</th>
+                            <th scope="col">열 3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">행 1</th>
+                            <td>데이터 1</td>
+                            <td>데이터 2</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">행 2</th>
+                            <td>데이터 3</td>
+                            <td>데이터 4</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">푸터</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+            <ul id="aside-inner" class="aside-inner">
+                <li><a href="#sec1">기본규칙</a></li>
+            </ul>
+        </div>
+        <!-- Documentation information -->
+        <div class="cpcv-doc-info">
+            <ul>
+                <li>
+                    <p><strong>Published on:</strong></p>
+                    <p>2023년 4월 5일</p>
+                </li>
+                <li>
+                    <p><strong>Writted by:</strong></p>
+                    <p>pj.yyxxmm</p>
+                </li>
+            </ul>
+        </div>
+        <!-- // Documentation information -->
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<html lang="ko">
+    <head> </head>
+
+    <body>
+        <!-- 
+    *************************************************
+    　　UPDATE LOG
+    *************************************************
+    No_ 수정일자　　 작성자　　 수정내용
+    01_ 2023.04.05　윤성미　:　컨벤션 세팅 시작
+    02_ 2023.04.11　고하늘　:　컨벤션 컨텐츠 작업
+
+-->
+        <div class="wrap">
+            <h2 class="depth1-tit">input</h2>
+            <section id="sec1" class="section">
+                <h3 class="depth2-tit">기본규칙</h3>
+                <ol class="depth-list type-bar">
+                    <li>웹 접근성을 준수하기 위해 <code>&lt;label&gt;</code>태그를 함께 사용한다.</li>
+                    <li><code>&lt;label&gt;</code> 태그에 for, <code>&lt;input&gt;</code> 태그에 id 값을 지정하여 연결한다.</li>
+                </ol>
+                <p class="info-txt type-dot">웹접근성을 준수한 label 숨김처리</p>
+                <p class="info-txt type-ref">대체텍스트(숨김텍스트)에 대한 설명은 <b class="hl">convention > 코딩시 참고사항</b> 을 참고바람</p>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Clabel%2520for%253D%2522inputId%2522%2520class%253D%2522sr-only%2522%253E%25EB%259D%25BC%25EB%25B2%25A8%2520%25ED%2585%258D%25EC%258A%25A4%25ED%258A%25B8%253C%252Flabel%253E%250A%253Cinput%2520type%253D%2522text%2522%2520id%253D%2522inputId%2522%2520name%253D%2522inputName%2522%253E"
+                    style="width: 100%; height: 114px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <section id="sec2" class="section">
+                <h3 class="depth2-tit">type="text"</h3>
+                <ol class="depth-list type-bar">
+                    <li>type="text"의 attribute를 사용하여 input 필드의 스타일을 제어한다.(max-length, placeholder, autocomplete, required ...)</li>
+                </ol>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Clabel%2520for%253D%2522username%2522%253EUsername%253A%253C%252Flabel%253E%250A%253Cinput%2520type%253D%2522text%2522%2520id%253D%2522username%2522%2520name%253D%2522username%2522%253E"
+                    style="width: 100%; min-height: 114px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <ul id="aside-inner" class="aside-inner">
+                <li><a href="#sec1">기본규칙</a></li>
+                <li><a href="#sec2">type ="text"</a></li>
+            </ul>
+        </div>
+        <!-- Documentation information -->
+        <div class="cpcv-doc-info">
+            <ul>
+                <li>
+                    <p><strong>Published on:</strong></p>
+                    <p>2023년 4월 5일</p>
+                </li>
+                <li>
+                    <p><strong>Writted by:</strong></p>
+                    <p>pj.yyxxmm</p>
+                </li>
+            </ul>
+        </div>
+        <!-- // Documentation information -->
+    </body>
+</html>

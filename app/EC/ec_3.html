@@ -1,0 +1,78 @@
+<html lang="ko">
+    <head> </head>
+
+    <body>
+        <!-- 
+    *************************************************
+    　　UPDATE LOG
+    *************************************************
+    No_ 수정일자　　 작성자　　 수정내용
+    01_ 2023.04.05　윤성미　:　컨벤션 세팅 시작
+    02_ 2023.04.11　고하늘　:　컨벤션 컨텐츠 작업
+
+-->
+        <div class="wrap">
+            <h2 class="depth1-tit">button</h2>
+            <section id="sec1" class="section">
+                <h3 class="depth2-tit">&lt;button&gt;</h3>
+                <ol class="depth-list type-bar">
+                    <li><code>type="button"</code>을 사용한다.</li>
+                    <li>aria-label을 사용하여 button 에 대한 설명을 적는 것을 권장한다.</li>
+                    <li>버튼을 그룹핑 할 경우 <code>role="group"</code> 을 사용하여 그룹을 명시하는 것을 권장한다.</li>
+                </ol>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Cbutton%2520class%253D%2522btn%2522%2520type%253D%2522button%2522%2520aria-label%253D%2522%25EB%25B2%2584%25ED%258A%25BC%2520%25EC%2584%25A4%25EB%25AA%2585%2522%2520disabled%253E%25EB%25B2%2584%25ED%258A%25BC%2520%25ED%2585%258D%25EC%258A%25A4%25ED%258A%25B8%253C%252Fbutton%253E%250A%253Cbutton%2520class%253D%2522btn%2522%2520type%253D%2522button%2522%2520aria-label%253D%2522%25EB%25B2%2584%25ED%258A%25BC%2520%25EC%2584%25A4%25EB%25AA%2585%2522%253E%25EB%25B2%2584%25ED%258A%25BC%2520%25ED%2585%258D%25EC%258A%25A4%25ED%258A%25B8%253C%252Fbutton%253E%250A%250A%253C%21--%2520%25EB%25B2%2584%25ED%258A%25BC%2520%25EA%25B7%25B8%25EB%25A3%25B9%2520--%253E%250A%253Cdiv%2520role%253D%2522group%2522%2520aria-label%253D%2522%25EB%25B2%2584%25ED%258A%25BC%2520%25EA%25B7%25B8%25EB%25A3%25B9%2520%25EC%2584%25A4%25EB%25AA%2585%2522%2520class%253D%2522btn-group%2522%253E%250A%2520%2520%253Cbutton%2520class%253D%2522btn%2522%2520type%253D%2522button%2522%253E%25EB%25B2%2584%25ED%258A%25BC%25201%253C%252Fbutton%253E%250A%2520%2520%253Cbutton%2520class%253D%2522btn%2522%2520type%253D%2522button%2522%253E%25EB%25B2%2584%25ED%258A%25BC%25202%253C%252Fbutton%253E%250A%2520%2520%253Cbutton%2520class%253D%2522btn%2522%2520type%253D%2522button%2522%253E%25EB%25B2%2584%25ED%258A%25BC%25203%253C%252Fbutton%253E%250A%253C%252Fdiv%253E"
+                    style="width: 100%; height: 294px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <section id="sec2" class="section">
+                <h3 class="depth2-tit">&lt;a&gt;</h3>
+                <ol class="depth-list type-bar">
+                    <li>이벤트 기본동작(링크이동)을 방지하기 위해 <code>href="javascript:void(0)"</code>을 사용한다.</li>
+                    <li><code>role="button"</code>을 기재한다.</li>
+                    <li>aria-label을 사용하여 button 에 대한 설명을 적는 것을 권장한다.</li>
+                    <li>버튼을 그룹핑 할 경우 <code>role="group"</code> 을 사용하여 그룹을 명시하는 것을 권장한다.</li>
+                </ol>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Ca%2520href%253D%2522javascript%253Avoid%280%29%2522%2520role%253D%2522button%2522%2520aria-label%253D%2522%25EB%25B2%2584%25ED%258A%25BC%2520%25EC%2584%25A4%25EB%25AA%2585%2522%2520class%253D%2522btn%2522%253E%25EB%25B2%2584%25ED%258A%25BC%2520%25ED%2585%258D%25EC%258A%25A4%25ED%258A%25B8%253C%252Fa%253E%250A%250A%253C%21--%2520%25EB%25B2%2584%25ED%258A%25BC%2520%25EA%25B7%25B8%25EB%25A3%25B9--%253E%250A%253Cdiv%2520role%253D%2522group%2522%2520aria-label%253D%2522%25EB%25B2%2584%25ED%258A%25BC%2520%25EA%25B7%25B8%25EB%25A3%25B9%2520%25EC%2584%25A4%25EB%25AA%2585%2522%2520class%253D%2522btn-group%2522%253E%250A%2520%2520%253Ca%2520href%253D%2522javascript%253Avoid%280%29%2522%2520class%253D%2522btn%2522%253E%25EB%25B2%2584%25ED%258A%25BC%25201%253C%252Fa%253E%250A%2520%2520%253Ca%2520href%253D%2522javascript%253Avoid%280%29%2522%2520class%253D%2522btn%2522%253E%25EB%25B2%2584%25ED%258A%25BC%25202%253C%252Fa%253E%250A%2520%2520%253Ca%2520href%253D%2522javascript%253Avoid%280%29%2522%2520class%253D%2522btn%2522%253E%25EB%25B2%2584%25ED%258A%25BC%25203%253C%252Fa%253E%250A%253C%252Fdiv%253E"
+                    style="width: 100%; height: 254px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <section id="sec3" class="section">
+                <h3 class="depth2-tit">&lt;input&nbsp;&nbsp;type="button"&gt;</h3>
+                <ol class="depth-list type-bar">
+                    <li>aria-label을 사용하여 button 에 대한 설명을 적는 것을 권장한다.</li>
+                </ol>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Cinput%2520type%253D%2522button%2522%2520value%253D%2522%25EB%25B2%2584%25ED%258A%25BC%2520%25ED%2585%258D%25EC%258A%25A4%25ED%258A%25B8%2522%2520aria-label%253D%2522%25EB%25B2%2584%25ED%258A%25BC%2520%25EC%2584%25A4%25EB%25AA%2585%2522%253E"
+                    style="width: 100%; height: 94px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <ul id="aside-inner" class="aside-inner">
+                <li><a href="#sec1">&lt;button&gt;</a></li>
+                <li><a href="#sec2">&lt;a&gt;</a></li>
+                <li><a href="#sec3">&lt;input type="button"&gt;</a></li>
+            </ul>
+        </div>
+        <!-- Documentation information -->
+        <div class="cpcv-doc-info">
+            <ul>
+                <li>
+                    <p><strong>Published on:</strong></p>
+                    <p>2023년 4월 5일</p>
+                </li>
+                <li>
+                    <vp><strong>Writted by:</strong></vp>
+                    <p>pj.yyxxmm</p>
+                </li>
+            </ul>
+        </div>
+        <!-- // Documentation information -->
+    </body>
+</html>

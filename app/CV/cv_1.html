@@ -1,0 +1,123 @@
+<html lang="ko">
+    <head> </head>
+
+    <body>
+        <!-- 
+				*************************************************
+				　　UPDATE LOG
+				*************************************************
+				No_ 수정일자　　 작성자　　 수정내용
+				01_ 2023.04.05　윤성미　:　컨벤션 세팅 시작
+				02_ 2023.04.11　고하늘　:　컨벤션 컨텐츠 작업
+		
+		-->
+        <div class="wrap">
+            <h2 class="depth1-tit">
+                Development <br />
+                environment
+            </h2>
+            <!-- <h2 class="depth1-tit">Directory tree &<br/>  Files role</h2> -->
+            <section id="sec1" class="section">
+                <h3 class="depth2-tit">작업환경</h3>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">개발환경</p>
+                    <ol class="depth-list type-num">
+                        <li><b class="hl">visual studio code</b>를 사용한다.</li>
+                        <li>마크업 들여쓰기는 <b class="hl">TAB 크기 4</b> 로 맞춰 작업한다.</li>
+                    </ol>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">형상관리(SVN) 사용방법</p>
+                    <ol class="depth-list type-num">
+                        <li>
+                            <p class="mt0">프로젝트를 받을 파일에서 우클릭 후 'SVN Checkout...'을 눌러줍니다.</p>
+                            <img src="./app/assets/img/svn_ref1.png" alt="svn 사용방법" />
+                        </li>
+                        <li>
+                            <p>그러면 다음과 같은 창이 뜹니다. 여기서 'URL of directory'칸에 받아올 프로젝트의 url 을 넣고 'OK' 버튼을 클릭한다.</p>
+                            <img src="./app/assets/img/svn_ref2.png" alt="svn 사용방법" />
+                        </li>
+                        <li>
+                            <p>참고로 여기서 URL of repository 칸 오른쪽에 '...' 을 클릭하면 받아올 프로젝트의 구조를 볼 수 있습니다.</p>
+                            <img src="./app/assets/img/svn_ref3.png" alt="svn 사용방법" /><img src="./app/assets/img/svn_ref4.png" alt="svn 사용방법" class="mt10" />
+                        </li>
+                        <li>
+                            <p>Checkout Finished 창이 뜨고 'OK'버튼을 클릭한다.</p>
+                            <img src="./app/assets/img/svn_ref5.png" alt="svn 사용방법" />
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section id="sec2" class="section">
+                <h3 class="depth2-tit">디렉토리 구조</h3>
+                <ol class="depth-list type-bar">
+                    <li>해당 프로젝트명을 상위 폴더로 한다.</li>
+                    <li>
+                        스타일에 관련된 폴더(css, images, font 등)는 assets 폴더를 상위에 두고 사용하거나, 각각의 폴더를 독립적으로 사용 하는 것을 권장한다.
+                        <span class="ex">assets > css, images, font || css, images, font (독립적 폴더)</span>
+                    </li>
+                </ol>
+                <p class="info-txt type-ref">다국어 분류는 상위 폴더를 국가 별로 감싸서 분류 (KO > html, css, js ... && EN > html, css, js ...) 하거나, 현 폴더 내부 에서 분류 (html > ko, en ,cn) 한다.</p>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=markdown&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%25F0%259F%2593%25A6%25ED%2594%2584%25EB%25A1%259C%25EC%25A0%259D%25ED%258A%25B8%25EB%25AA%2585%250A%2520%25E2%2594%25A3%2520%25F0%259F%2593%2582css%250A%2520%25E2%2594%25A3%2520%25F0%259F%2593%2582font%250A%2520%25E2%2594%25A3%2520%25F0%259F%2593%2582html%250A%2520%25E2%2594%25A3%2520%25F0%259F%2593%2582images%250A%2520%25E2%2594%25A3%2520%25F0%259F%2593%2582js%250A%2520%25E2%2594%25A3%2520%25F0%259F%2593%259Cindex.html%250A%2520%25E2%2594%2597%2520%25F0%259F%2593%259C%25EC%2582%25B0%25EC%25B6%259C%25EB%25AC%25BC.html"
+                    style="width: 100%; height: 234px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <section id="sec3" class="section">
+                <h3 class="depth2-tit">CSS 파일역할</h3>
+                <table style="word-break: keep-all">
+                    <caption>
+                        속성 선언 순서표
+                    </caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col">파일명</th>
+                            <th scope="col">역할</th>
+                            <th scope="col">항목</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">reset.css</th>
+                            <td>초기화</td>
+                            <td>폰트 초기화, 도큐먼트 초기화</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">font.css</th>
+                            <td>사용할 서체 선언</td>
+                            <td>서체 정의 및 호출</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">common.css</th>
+                            <td>사이트 공통 선언</td>
+                            <td>(공통) 폰트컬러 예약어, 여백관련 예약어, 버튼컬러예약어, 타이틀 정의, 링크스타일, 폼스타일, 텍스트아레아, 버튼, 탭기본, 아이콘기본 등 주석으로 항목 분류</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">layout.css</th>
+                            <td>레이아웃</td>
+                            <td>공통레이아웃, 서브공통, 서브개별, 그리드 시스템</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">main.css</th>
+                            <td>메인 고유 스타일</td>
+                            <td>공통, 섹션, 메인 컨텐츠</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="info-txt type-ref">mobile에서는 각 파일명 끝에 _m으로 사용한다.(common_m.css, layout_m.css 등)</p>
+            </section>
+            <ul id="aside-inner" class="aside-inner">
+                <li><a href="#sec1">작업환경</a></li>
+                <li><a href="#sec2">디렉토리 구조</a></li>
+                <li><a href="#sec3">CSS 파일역할</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<html lang="ko">
+    <head> </head>
+
+    <body>
+        <!-- 
+    *************************************************
+    　　UPDATE LOG
+    *************************************************
+    No_ 수정일자　　 작성자　　 수정내용
+    01_ 2023.04.05　윤성미　:　컨벤션 세팅 시작
+    02_ 2023.04.11　고하늘　:　컨벤션 컨텐츠 작업
+
+-->
+        <div class="wrap">
+            <h2 class="depth1-tit">checkbox/radio</h2>
+            <section id="sec1" class="section">
+                <h3 class="depth2-tit">type="checkbox"</h3>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Cinput%2520type%253D%2522checkbox%2522%2520id%253D%2522checkboxId%2522%2520name%253D%2522checkboxName%2522%2520value%253D%2522checkboxValue%2522%253E%250A%253Clabel%2520for%253D%2522checkboxId%2522%253E%25EC%25B2%25B4%25ED%2581%25AC%25EB%25B0%2595%25EC%258A%25A4%2520%25EB%25A0%2588%25EC%259D%25B4%25EB%25B8%2594%253C%252Flabel%253E"
+                    style="width: 100%; height: 134px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <section id="sec2" class="section">
+                <h3 class="depth2-tit">type="radio"</h3>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Cinput%2520type%253D%2522radio%2522%2520id%253D%2522radioId1%2522%2520name%253D%2522radioName%2522%2520value%253D%2522radioValue1%2522%253E%250A%253Clabel%2520for%253D%2522radioId1%2522%253E%25EB%259D%25BC%25EB%2594%2594%25EC%2598%25A41%253C%252Flabel%253E%250A%253Cinput%2520type%253D%2522radio%2522%2520id%253D%2522radioId2%2522%2520name%253D%2522radioName%2522%2520value%253D%2522radioValue2%2522%253E%250A%253Clabel%2520for%253D%2522radioId2%2522%253E%25EB%259D%25BC%25EB%2594%2594%25EC%2598%25A42%253C%252Flabel%253E"
+                    style="width: 100%; height: 154px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <section id="sec3" class="section">
+                <h3 class="depth2-tit">grouping</h3>
+                <ol class="depth-list type-bar">
+                    <li><code>&lt;fieldset&gt;</code> 과<code>&lt;legend&gt;</code> 를 사용 하거나, role="group"을 사용하여 그룹핑 하는 등 그 외에 다양한 방법이 있지만, 그 중 <code>&lt;fieldset&gt;</code> 을 사용하여 그룹핑 하는 방법을 권장한다.</li>
+                </ol>
+                <p class="info-txt type-bar">checkbox</p>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Cfieldset%253E%250A%2520%2520%253Clegend%253E%25EC%25B2%25B4%25ED%2581%25AC%25EB%25B0%2595%25EC%258A%25A4%2520%25EA%25B7%25B8%25EB%25A3%25B9%2520%25EB%25A0%2588%25EC%259D%25B4%25EB%25B8%2594%253C%252Flegend%253E%250A%2520%2520%253Cinput%2520type%253D%2522checkbox%2522%2520id%253D%2522checkboxId1%2522%2520name%253D%2522checkboxGroupName%2522%2520value%253D%2522checkboxValue1%2522%253E%250A%2520%2520%253Clabel%2520for%253D%2522checkboxId1%2522%253E%25EC%25B2%25B4%25ED%2581%25AC%25EB%25B0%2595%25EC%258A%25A41%253C%252Flabel%253E%250A%250A%2520%2520%253Cinput%2520type%253D%2522checkbox%2522%2520id%253D%2522checkboxId2%2522%2520name%253D%2522checkboxGroupName%2522%2520value%253D%2522checkboxValue2%2522%253E%250A%2520%2520%253Clabel%2520for%253D%2522checkboxId2%2522%253E%25EC%25B2%25B4%25ED%2581%25AC%25EB%25B0%2595%25EC%258A%25A42%253C%252Flabel%253E%250A%250A%2520%2520%253Cinput%2520type%253D%2522checkbox%2522%2520id%253D%2522checkboxId3%2522%2520name%253D%2522checkboxGroupName%2522%2520value%253D%2522checkboxValue3%2522%253E%250A%2520%2520%253Clabel%2520for%253D%2522checkboxId3%2522%253E%25EC%25B2%25B4%25ED%2581%25AC%25EB%25B0%2595%25EC%258A%25A43%253C%252Flabel%253E%250A%253C%252Ffieldset%253E"
+                    style="width: 100%; height: 354px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+                <p class="info-txt type-bar">radio</p>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Cfieldset%253E%250A%2520%2520%253Clegend%253E%25EB%259D%25BC%25EB%2594%2594%25EC%2598%25A4%2520%25EA%25B7%25B8%25EB%25A3%25B9%2520%25EB%25A0%2588%25EC%259D%25B4%25EB%25B8%2594%253C%252Flegend%253E%250A%2520%2520%253Cinput%2520type%253D%2522radio%2522%2520id%253D%2522radioId1%2522%2520name%253D%2522radioGroupName%2522%2520value%253D%2522radioValue1%2522%253E%250A%2520%2520%253Clabel%2520for%253D%2522radioId1%2522%253E%25EB%259D%25BC%25EB%2594%2594%25EC%2598%25A41%253C%252Flabel%253E%250A%2520%2520%253Cinput%2520type%253D%2522radio%2522%2520id%253D%2522radioId2%2522%2520name%253D%2522radioGroupName%2522%2520value%253D%2522radioValue2%2522%253E%250A%2520%2520%253Clabel%2520for%253D%2522radioId2%2522%253E%25EB%259D%25BC%25EB%2594%2594%25EC%2598%25A42%253C%252Flabel%253E%250A%2520%2520%253Cinput%2520type%253D%2522radio%2522%2520id%253D%2522radioId3%2522%2520name%253D%2522radioGroupName%2522%2520value%253D%2522radioValue3%2522%253E%250A%2520%2520%253Clabel%2520for%253D%2522radioId3%2522%253E%25EB%259D%25BC%25EB%2594%2594%25EC%2598%25A43%253C%252Flabel%253E%250A%253C%252Ffieldset%253E"
+                    style="width: 100%; height: 314px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <section id="sec4" class="section">
+                <h3 class="depth2-tit">img checkbox/radio</h3>
+                <p class="info-txt type-dot">img 를 사용 할 때 규칙</p>
+                <ol class="depth-list type-num">
+                    <li><code>&lt;img&gt;</code> 태그를 사용할 경우 alt 값을 넣어준다.</li>
+                    <li><code>&lt;label&gt;</code> 태그에 background-image를 사용하여 img를 보여줄때, 대체 텍스트(숨김텍스트) class 를 사용하여 접근성을 준수한다.</li>
+                </ol>
+                <p class="info-txt type-ref">대체텍스트(숨김텍스트)에 대한 설명은 <b class="hl">convention > 코딩시 참고사항</b> 을 참고바람</p>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Clabel%2520for%253D%2522checkboxID1%2522%253E%250A%2520%2520%253Cimg%2520src%253D%2522image.jpg%2522%2520alt%253D%2522%25EC%2584%25A4%25EB%25AA%2585%2522%2520%252F%253E%250A%253C%252Flabel%253E%250A%253Cinput%2520type%253D%2522checkbox%2522%2520id%253D%2522checkboxID1%2522%2520%252F%253E"
+                    style="width: 100%; height: 154px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+                <iframe
+                    src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253Cinput%2520type%253D%2522checkbox%2522%2520id%253D%2522checkboxId1%2522%2520%252F%253E%250A%253Clabel%2520for%253D%2522checkboxId1%2522%2520class%253D%2522checkbox_label%2522%253E%250A%2520%2520%253Cspan%2520class%253D%2522sr-only%2522%253E%25EC%2584%25A4%25EB%25AA%2585%253C%252Fspan%253E%250A%253C%252Flabel%253E"
+                    style="width: 100%; height: 154px; border: 0; transform: scale(1); overflow: hidden"
+                    sandbox="allow-scripts allow-same-origin"
+                >
+                </iframe>
+            </section>
+            <ul id="aside-inner" class="aside-inner">
+                <li><a href="#sec1">type ="checkbox"</a></li>
+                <li><a href="#sec2">type ="radio"</a></li>
+                <li><a href="#sec3">grouping</a></li>
+                <li><a href="#sec4">img checkbox/radio</a></li>
+            </ul>
+        </div>
+        <!-- Documentation information -->
+        <div class="cpcv-doc-info">
+            <ul>
+                <li>
+                    <p><strong>Published on:</strong></p>
+                    <p>2023년 4월 5일</p>
+                </li>
+                <li>
+                    <p><strong>Writted by:</strong></p>
+                    <p>pj.yyxxmm</p>
+                </li>
+            </ul>
+        </div>
+        <!-- // Documentation information -->
+    </body>
+</html>

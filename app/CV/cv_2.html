@@ -1,0 +1,486 @@
+<html lang="ko">
+    <head> </head>
+
+    <body>
+        <!-- 
+				*************************************************
+				　　UPDATE LOG
+				*************************************************
+				No_ 수정일자　　 작성자　　 수정내용
+				01_ 2023.04.05　윤성미　:　컨벤션 세팅 시작
+				02_ 2023.04.11　고하늘　:　컨벤션 컨텐츠 작업
+		
+		-->
+        <div class="wrap">
+            <h2 class="depth1-tit">Naming rules</h2>
+            <section id="sec1" class="section">
+                <h3 class="depth2-tit">공통규칙</h3>
+                <ol class="depth-list type-bar">
+                    <li>네이밍의 첫 시작에 숫자, 특수문자, 대문자의 사용은 지양하며, 영문 소문자, 숫자, underscore(_)로 작성한다</li>
+                    <li>네이밍은 '형태_의미_상태' 순서로 조합하며, 3단계를 넘어가지 않도록 권장한다. <span class="ex">btn_apply_on, box_news, box_reply_open...</span></li>
+                    <li>네이밍 정의 시 prefix, subfix, suffix를 최대한 활용한다.</li>
+                    <li>네이밍 정의 시 임의로 축약하지 않는다.</li>
+                </ol>
+                <p class="info-txt type-ref">hyphen(-)을 사용 할 경우는 단계(depth)를 나타낼때 주로 사용하며, 단어간의 연결은 underscore(_)를 사용하는 것을 권장한다.</p>
+            </section>
+            <section id="sec2" class="section">
+                <h3 class="depth2-tit">id 및 class 네이밍 규칙</h3>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">PC HTML 기본 템플릿 구조</p>
+                    <iframe
+                        src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C0.01%29&t=one-light&wt=none&l=htmlmixed&width=680&ds=false&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=true&fl=1&fm=Hack&fs=14px&lh=143%25&si=false&es=2x&wm=false&code=%253C%21DOCTYPE%2520html%253E%250A%253Chtml%2520lang%253D%2522ko%2522%253E%250A%253Chead%253E%250A%2520%2520%253Ctitle%253E%25EB%25AC%25B8%25EC%2584%259C%2520%25EC%25A0%259C%25EB%25AA%25A9%253C%252Ftitle%253E%250A%2520%2520%253Cmeta%2520charset%253D%2522utf-8%2522%253E%250A%253C%252Fhead%253E%250A%253Cbody%253E%250A%2520%2520%253Cdiv%2520id%253D%2522wrap%2522%253E%250A%2520%2520%2520%2520%253Cheader%2520id%253D%2522header%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cnav%2520class%253D%2522gnb%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%21--%2520gnb%2520%25EB%25A9%2594%25EB%2589%25B4%2520%25ED%2595%25AD%25EB%25AA%25A9%25EB%2593%25A4%2520--%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fnav%253E%250A%2520%2520%2520%2520%253C%252Fheader%253E%250A%2520%2520%2520%2520%253Cdiv%2520id%253D%2522container%2522%253E%250A%2520%2520%2520%2520%2520%2520%253Cnav%2520class%253D%2522snb%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%21--%2520snb%2520%25EB%25A9%2594%25EB%2589%25B4%2520%25ED%2595%25AD%25EB%25AA%25A9%25EB%2593%25A4%2520--%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fnav%253E%250A%2520%2520%2520%2520%2520%2520%253Cdiv%2520id%253D%2522content%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Csection%2520class%253D%2522section%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%21--%2520section%2520%25EC%25BD%2598%25ED%2585%2590%25EC%25B8%25A0%25201%2520--%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fsection%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Csection%2520class%253D%2522section%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%21--%2520section%2520%25EC%25BD%2598%25ED%2585%2590%25EC%25B8%25A0%25202%2520--%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fsection%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%2520%2520%253Caside%2520class%253D%2522aside%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253Csection%2520class%253D%2522section%2522%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%2520%253C%21--%2520aside%2520%25EC%25BD%2598%25ED%2585%2590%25EC%25B8%25A0%2520--%253E%250A%2520%2520%2520%2520%2520%2520%2520%2520%253C%252Fsection%253E%250A%2520%2520%2520%2520%2520%2520%253C%252Faside%253E%250A%2520%2520%2520%2520%253C%252Fdiv%253E%250A%2520%2520%2520%2520%253Cfooter%2520id%253D%2522footer%2522%253E%250A%2520%2520%2520%2520%253C%252Ffooter%253E%250A%2520%2520%253C%252Fdiv%253E%250A%2520%2520%253Cscript%2520src%253D%2522%25ED%258C%258C%25EC%259D%25BC%25EA%25B2%25BD%25EB%25A1%259C.js%2522%253E%253C%252Fscript%253E%250A%253C%252Fbody%253E%250A%253C%252Fhtml%253E"
+                        style="width: 100%; height: 815px; border: 0; transform: scale(1); overflow: hidden"
+                        sandbox="allow-scripts allow-same-origin"
+                    >
+                    </iframe>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">id/class</p>
+                    <ol class="depth-list type-num">
+                        <li>id는 camelcase 방식으로 하며, class는 underscore 방식으로 사용한다.</li>
+                        <li>id는 화면에서의 고유 기능을 명시하도록 네이밍 한다. <span class="ex">id="btnGnbSearch"</span></li>
+                        <li>class는 요소 기능을 표현하도록 네이밍 한다.</li>
+                        <li>레이아웃을 제외한 id는 스타일을 지정하지 않는다.</li>
+                        <li>id는 문서 내 한 번만 사용되며, id, class 네이밍은 가급적 같지 않게 네이밍 한다.</li>
+                    </ol>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">class 네이밍 확장</p>
+                    <ol class="depth-list type-num">
+                        <li>기본형 class에 종속되어 여백, 색깔, 행간 등의 몇 가지 속성을 부여하고자 할 때는 종속 확장 class로 사용한다. <span class="ex">기본형 - mykin_list / 확장형 - mykin_list_v1, mykin_list_v2...</span></li>
+                        <li>기본형 class의 변형이 타입으로 분류할 만큼 클 경우엔 독립 확장 class로 사용한다. <span class="ex">기본형 - mykin_list / 확장형 - mykin_list2, mykin_list3</span></li>
+                    </ol>
+                </div>
+            </section>
+            <section id="sec3" class="section">
+                <h3 class="depth2-tit">이미지 네이밍 규칙</h3>
+                <p class="info-txt type-dot">네이밍 규칙 및 조합</p>
+                <ol class="depth-list type-num">
+                    <li>같은 분류의 이미지가 두 개 이상이면 파일 이름 마지막에 숫자를 추가하여 구분한다.</li>
+                    <li>이미지 네이밍은 이미지 확장자와 관계 없이 순차적으로 적용한다. <span class="ex">bu_dot1.gif,&nbsp; &nbbu_dot2.jpg,&nbsp; bu_dot3.png</span></li>
+                    <li>임시 이미지는 tmp_를 조합한다. <span class="ex">tmp_</span></li>
+                </ol>
+            </section>
+            <section id="sec4" class="section">
+                <h3 class="depth2-tit">파일 및 디렉토리 네이밍 규칙</h3>
+                <p class="info-txt type-dot">네이밍 규칙 및 조합</p>
+                <ol class="depth-list type-num">
+                    <li>HTML파일은 '메뉴이름_의미_상태' 순서로 조합한다. <span class="ex">news_nboard_view.html</span></li>
+                    <li>CSS 파일은 '서비스이름'을 맨 앞으로 하여 조합한다. <span class="ex">news_home.css</span></li>
+                </ol>
+                <table>
+                    <caption>
+                        파일 및 디렉토리 네이밍에 관한 예제와 설명
+                    </caption>
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="row">분류</th>
+                            <th scope="row">예제</th>
+                            <th scope="row">설명</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" rowspan="5">HTML</th>
+                            <td>news</td>
+                            <td>'서비스영문이름.html' 로 사용</td>
+                        </tr>
+                        <tr>
+                            <td>pop</td>
+                            <td>팝업 파일을 사용</td>
+                        </tr>
+                        <tr>
+                            <td>ifr</td>
+                            <td>iframe 파일을 사용</td>
+                        </tr>
+                        <tr>
+                            <td>inc</td>
+                            <td>Include 파일</td>
+                        </tr>
+                        <tr>
+                            <td>tmp</td>
+                            <td>임시파일을 사용</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">CSS</th>
+                            <td>news.css</td>
+                            <td>'서비스영문이름.css'로 사용한다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row" rowspan="4">Folder</th>
+                            <td>p_yymmdd_프로젝트이름</td>
+                            <td>신규 프로젝트 작업 시 사용</td>
+                        </tr>
+                        <tr>
+                            <td>img, font, css, js</td>
+                            <td>image, font, css, javascript 폴더 사용</td>
+                        </tr>
+                        <tr>
+                            <td>p_yymmdd_프로젝트명 > 메뉴명</td>
+                            <td>HTML 파일의 폴더 분류가 필요한 경우 사용</td>
+                        </tr>
+                        <tr>
+                            <td>tmp_</td>
+                            <td>임시파일의 폴더 분류가 필요한 경우 사용</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section id="sec5" class="section">
+                <h3 class="depth2-tit">prefix/subfix/suffix 정의</h3>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">prefix</p>
+                    <ol class="depth-list type-num">
+                        <li>접두사를 의미하는 것으로, 앞부분에 사용하며, 주로 형태를 나타내는 데 사용된다.<span class="ex">tab_notice, tbl_product</span></li>
+                        <li>기본 prefix는 형태별로 통일한다.</li>
+                        <li>서브 prefix가 필요한 부분은 underscore로 구분하여 표기한다. <span class="ex">line / line_dot</span></li>
+                        <li>prefix 2개 이상 중복 시 기능적인 prefix가 맨 앞부분에 위치할 수 있도록 한다.</li>
+                        <li>단독사용 클래스는 지양하며, prefix를 조합한 형태로 작성한다. <span class="hl">예외: fst, lst, hide, on</span></li>
+                        <li>on 클래스인 경우, 단일 특정요소에 상태변화 클래스를 적용한다면 suffix로서 적용한다.</li>
+                    </ol>
+                    <p class="info-txt type-bar mt20">분류별 prefix 부가설명</p>
+                    <table>
+                        <caption>
+                            분류별 prefix 부가설명 목록
+                        </caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 25%" />
+                            <col />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">분류</th>
+                                <th scope="col">prefix</th>
+                                <th scope="col">부가설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">타이틀</th>
+                                <td>tit</td>
+                                <td>일반적인 타이틀</td>
+                            </tr>
+                            <tr>
+                                <th scope="rowgroup" rowspan="3">영역</th>
+                                <td>section</td>
+                                <td>제목 태그(Heading Tag)를 지닌 영역 구분 (선택적 사용, 중첩사용 지양)</td>
+                            </tr>
+                            <tr>
+                                <td>wrap</td>
+                                <td>일반 영역의 묶음 (선택적 사용, 중첩사용 지양)</td>
+                            </tr>
+                            <tr>
+                                <td>inner</td>
+                                <td>부모 wrapper 가 존재하며 자식 묶음이 단독으로 필요한 경우</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">CSS</th>
+                                <td>news.css</td>
+                                <td>'서비스영문이름.css'로 사용한다.</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="3">내비게이션</th>
+                                <td>gnb</td>
+                                <td>서비스 전체 내비게이션</td>
+                            </tr>
+                            <tr>
+                                <td>lnb</td>
+                                <td>지역 내비게이션(gnb 영역)</td>
+                            </tr>
+                            <tr>
+                                <td>snb</td>
+                                <td>사이드 내비게이션(좌측메뉴)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">탭</th>
+                                <td>tab</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">테이블</th>
+                                <td>tbl</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">목록</th>
+                                <td>list</td>
+                                <td>일반 목록(ul, ol, 리스트 형식의 dl)</td>
+                            </tr>
+                            <tr>
+                                <th scope="rowgroup" rowspan="5">폼</th>
+                                <td>tf</td>
+                                <td>textfield (input 타입 text / textarea)</td>
+                            </tr>
+                            <tr>
+                                <td>inp</td>
+                                <td>input 타입 radio, checkbox, file 등</td>
+                            </tr>
+                            <tr>
+                                <td>opt</td>
+                                <td>selectbox</td>
+                            </tr>
+                            <tr>
+                                <td>lab label</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>fld</td>
+                                <td>fieldset</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">버튼</th>
+                                <td>btn</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">박스</th>
+                                <td>box</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">버튼</th>
+                                <td>btn</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">아이콘</th>
+                                <td>ico</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="rowgroup" rowspan="2">선</th>
+                                <td>line_방향</td>
+                                <td>일반 실선</td>
+                            </tr>
+                            <tr>
+                                <td>line_dot_방향</td>
+                                <td>점선</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배경</th>
+                                <td>bg</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">섬네일 이미지</th>
+                                <td>thumb</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">페이징</th>
+                                <td>paging</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">배너</th>
+                                <td>bnr/banner</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="rowgroup" rowspan="5">텍스트</th>
+                                <td>txt</td>
+                                <td>일반 텍스트</td>
+                            </tr>
+                            <tr>
+                                <td>txt_bar</td>
+                                <td>구분선 텍스트</td>
+                            </tr>
+                            <tr>
+                                <td>num</td>
+                                <td><span class="ex">num1, num2, ... - 숫자 사용 시 언더바(underscore) 사용 X</span></td>
+                            </tr>
+                            <tr>
+                                <td>copyright</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>time</td>
+                                <td><span class="ex">날짜 및 시간</span></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">강조</th>
+                                <td>emph</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="rowgroup" rowspan="2">링크</th>
+                                <td>link</td>
+                                <td>일반 링크</td>
+                            </tr>
+                            <tr>
+                                <td>link_more</td>
+                                <td>더 보기 링크</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">순서</th>
+                                <td>fst, mid, lst</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">팝업</th>
+                                <td>popup</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">레이어</th>
+                                <td>layer</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">광고</th>
+                                <td>ad</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">스페셜</th>
+                                <td>spe</td>
+                                <td>검색 스페셜 용도</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">위젯</th>
+                                <td>widget_소재명</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">상세내용</th>
+                                <td>desc</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">댓글</th>
+                                <td>cmt</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">subfix</p>
+                    <ol class="depth-list type-num">
+                        <li>하부 기호로서 subfix는 prefix와 함께 부가설명 용도로 사용한다. <span class="ex">ico_arr_news.gif</span></li>
+                    </ol>
+                    <p class="info-txt type-bar mt20">분류별 subfix 부가설명</p>
+                    <table>
+                        <caption>
+                            분류별 subfix 부가설명 목록
+                        </caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 40%" />
+                            <col />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">분류</th>
+                                <th scope="col">subfix</th>
+                                <th scope="col">부가설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">공용</th>
+                                <td>comm</td>
+                                <td>전역으로만 사용</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">위치</th>
+                                <td>top/mid/bot/left/right</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">순서</th>
+                                <td>fst/lst</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">그림자</th>
+                                <td>shadow</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">화살표</th>
+                                <td>arr</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">버튼상태</th>
+                                <td>on/off</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">카테고리</th>
+                                <td>cate</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">순위</th>
+                                <td>rank</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">suffix</p>
+                    <ol class="depth-list type-num">
+                        <li>접미사를 의미하는 것으로, prefix와 함께 부가설명 용도로 사용하며 주로 상태를 나타내는 데 사용된다. <span class="ex">btn_confirm_on, btn_prev</span></li>
+                    </ol>
+                    <p class="info-txt type-bar">분류별 suffix 부가설명</p>
+                    <table>
+                        <caption>
+                            분류별 suffix 부가설명 목록
+                        </caption>
+                        <colgroup>
+                            <col style="width: 25%" />
+                            <col style="width: 40%" />
+                            <col />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">분류</th>
+                                <th scope="col">suffix</th>
+                                <th scope="col">부가설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">상태변화</th>
+                                <td>_on / _off / _over / _hit / _focus</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">위치</th>
+                                <td>_top / _mid / _bot / _left / _right</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">순서</th>
+                                <td>_fst / _lst</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">이전/다음</th>
+                                <td>_prev / _next</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <ul id="aside-inner" class="aside-inner">
+                <li><a href="#sec1">공통규칙</a></li>
+                <li><a href="#sec2">id 및 class 네이밍 규칙</a></li>
+                <li><a href="#sec3">이미지 네이밍 규칙</a></li>
+                <li><a href="#sec4">파일 및 디렉토리 네이밍 규칙</a></li>
+                <li><a href="#sec5">prefix/subfix/suffix 정의</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

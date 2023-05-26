@@ -1,0 +1,181 @@
+<html lang="ko">
+    <head> </head>
+
+    <body>
+        <!-- 
+				*************************************************
+				　　UPDATE LOG
+				*************************************************
+				No_ 수정일자　　 작성자　　 수정내용
+				01_ 2023.04.05　윤성미　:　컨벤션 세팅 시작
+				02_ 2023.04.11　고하늘　:　컨벤션 컨텐츠 작업
+		
+		-->
+        <div class="wrap">
+            <h2 class="depth1-tit">CSS writing rules</h2>
+            <section id="sec1" class="section">
+                <h3 class="depth2-tit">기본규칙</h3>
+                <ol class="depth-list type-bar">
+                    <li>W3C Validation을 통과해야 한다.</li>
+                    <li>CSS 문서 첫 줄에 공백없이 인코딩 선언을 한다. 인코딩을 지정해줄 땐 "큰 따옴표"를 사용한다.<span class="ex">@charset "utf-8";</span></li>
+                    <li>모든 속성은 영문 소문자로만 작성한다.</li>
+                    <li>특성 선택자(attribute selectors)와 속성 값(property values)을 사용하는 경우엔 '작은 따옴표'를 권장한다. <span class="ex">font-family: 'open sans', arial, sans-serif; / content: 'Chapter: '/ li[class^='error-']</span></li>
+                    <li>url() 안에 들어가는 경로를 입력할 땐 따옴표를 쓰지 않고 작성한다. <span class="ex">background-image: url(image.jpg);</span></li>
+                    <li>마지막 속성의 세미콜론(;)은 삭제한다. <span class="ex">.class{font-size:12px;color:#000}</span></li>
+                </ol>
+            </section>
+            <section id="sec2" class="section">
+                <h3 class="depth2-tit">주석</h3>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">기본 형식</p>
+                    <ol class="depth-list type-num">
+                        <li>
+                            주석 기호와 주석 내용 사이에는 반드시 공백 한 칸이 있어야 한다. <span class="ex"><code>/* 주석 내용 */</code></span>
+                        </li>
+                        <li>주석 기호와 주석 내용 사이의 줄 바꿈은 허용하지 않는다. 단, 주석 내용 간 줄 바꿈은 허용한다.</li>
+                        <li>종료 주석은 사용하지 않는다</li>
+                    </ol>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">의미 있는 그룹 영역의 주석 표기</p>
+                    <ol class="depth-list type-num">
+                        <li>의미 있는 객체를 구분하기 위한 주석은 영역의 윗부분에 표기한다. 초기화와 레이아웃 스타일 그룹을 제외한 의미 있는 그룹 영역의 주석 표기는 선택 사항이다.</li>
+                    </ol>
+                    <div class="ex-box">
+                        <code><span style="color: red">/* 마이지식 SNB */</span></code>
+                        <code>.my_snb{width:182px}</code>
+                        <code>.my_snb li .num{padding-left:4px;color:#919190;font-size:11px;letter-spacing:0}</code>
+                        <code>.my_snb li.on a,.my_snb li.on .num{color:#259e0b}</code>
+                        <code>.my_snb li a{color:#424242}</code>
+                    </div>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">초기화 스타일 그룹</p>
+                    <ol class="depth-list type-num">
+                        <li>CSS 초기 파일에 따라 초기화 속성은 <code>/* Common */</code> 으로 그루핑한다.</li>
+                    </ol>
+                    <div class="ex-box">
+                        <code style="color: red"> /* Common */</code>
+                        <code
+                            >body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
+                            body,input,textarea,select,table{font-family:’돋움’,Dotum,AppleGothic,sans-serif;fontsize:12px}</code
+                        >
+                    </div>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">레이아웃 스타일 그룹</p>
+                    <ol class="depth-list type-num">
+                        <li>레이아웃을 위한 스타일 선언 시 <code>/* Layout */</code> 으로 그루핑한다.</li>
+                    </ol>
+                    <div class="ex-box">
+                        <code style="color: red">/* Layout */</code>
+                        <code>#wrap{…}</code>
+                        <code>#header{…}</code>
+                        <code>#container{…}</code>
+                        <code>#footer{…}</code>
+                    </div>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">작성자 정보 표기</p>
+                    <ol class="depth-list type-num">
+                        <li>작성자 표기는 css인코딩 선언 다음줄에 1회만 작성하며, 작성자 정보에는 CSS 파일 생성 날짜(YYMMDD 형식), 작성자 이름을 작성한다.</li>
+                        <li>작성자 정보 밑에는 빈 줄(한 줄)을 두어 스타일을 선언하는 문장과 구분되도록 한다.</li>
+                        <li>유지보수만 담당하는 경우라도 모두 기입한다.</li>
+                    </ol>
+                    <div class="ex-box">
+                        <code>@charset "utf-8";</code>
+                        <code>/* 230419 김**, 230419 고** */</code>
+                        <code>/* 230425 이** */</code>
+                        <span style="color: red">빈 줄</span>
+                    </div>
+                </div>
+            </section>
+            <section id="sec3" class="section">
+                <h3 class="depth2-tit">그 외 규칙</h3>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">공백</p>
+                    <ol class="depth-list type-num">
+                        <li>쉼표로 구분되는 선택자 간 공백은 제거한다.</li>
+                        <li>속성 간 공백 및 속성 값 사이 공백은 제거한다.</li>
+                        <li>중괄호 좌, 우 공백은 제거한다.</li>
+                    </ol>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">빈 줄</p>
+                    <ol class="depth-list type-num">
+                        <li>의미 있는 객체를 구분하기 위하여 코드 그룹 간 1줄씩 빈 줄을 넣을 수 있다. 단, 빈 줄의 간격은 1줄을 초과하지 않게 한다.</li>
+                    </ol>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">선택자</p>
+                    <ol class="depth-list type-num">
+                        <li>id 선택자는 <b class="hl">convention > class 네이밍 규칙</b> 에서 정의한 레이아웃(wrap, header, container, content, footer)에만 사용한다.</li>
+                        <li>속성을 선언할 때는 그 쓰임새가 레이아웃과 관련이 큰 것에서 시작하여 레이아웃과 무관한 것 순서로 선언한다.</li>
+                    </ol>
+                    <table style="word-break: keep-all">
+                        <caption>
+                            속성 선언 순서표
+                        </caption>
+                        <colgroup>
+                            <col style="width: 10%" />
+                            <col style="width: 25%" />
+                            <col />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>순서</th>
+                                <th>의미</th>
+                                <th>대표되는 속성</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>레이아웃</td>
+                                <td>display, visibility, overflow, float, clear, position, top, right, bottom, left, z-index</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>BOX</td>
+                                <td>width, height, margin, padding, border</td>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <td>배경</td>
+                                <td>background</td>
+                            </tr>
+                            <tr>
+                                <th>4</th>
+                                <td>폰트</td>
+                                <td>font,color, letter-spacing, text-align, text-decoration, text-indent, verticalalign, white-space</td>
+                            </tr>
+                            <tr>
+                                <th>5</th>
+                                <td>기타</td>
+                                <td>위에 언급되지 않은 나머지 속성들로 폰트의 관련 속성 이후에 선언하며, 기타 속성 내의 선언 순서는 무관함</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="info-txt type-ref">[속성 선언 순서 기준: 1: 레이아웃, 2: BOX, 3: 배경, 4: 폰트, 5: 기타]</p>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">약식 속성 사용 범위</p>
+                    <ol class="depth-list type-num">
+                        <li>border 와 background 는 약식 속성을 우선적으로 사용하며, font 약식 속성은 사용하지 않는다.</li>
+                    </ol>
+                </div>
+                <div class="inner-group">
+                    <p class="info-txt type-dot">z-index</p>
+                    <ol class="depth-list type-num">
+                        <li>z-index 속성의 속성 값의 범위는 최소 10, 최고 1000이며, 10 단위로 증감한다. 단, 10 단위 사이의 예외 변수가 발생하면 1 단위 값을 지정할 수 있다.</li>
+                    </ol>
+                </div>
+            </section>
+            <ul id="aside-inner" class="aside-inner">
+                <li><a href="#sec1">기본규칙</a></li>
+                <li><a href="#sec2">주석</a></li>
+                <li><a href="#sec3">그 외 규칙</a></li>
+            </ul>
+        </div>
+    </body>
+</html>
