@@ -11,6 +11,7 @@
         <meta property="og:type" content="article" />
         <title>CVNT | CODEPAR</title>
         <link href="res_/css/app.css" rel="stylesheet" />
+        <link href="app/assets/css/cp_guide.css" rel="stylesheet" />
         <script src="res_/js/jquery-1.11.3.min.js"></script>
         <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script> -->
         <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
@@ -25,6 +26,36 @@
                 <div id="cpcv-navs"></div>
             </nav>
             <article id="cpcv-pagecall">
+                <div class="wrap">
+                    <!-- <h2 class="depth1-tit">화면검수</h2> -->
+                    <section id="sec1" class="section">
+                        <h3 class="depth2-tit">face to face</h3>
+                        <!-- <p class="info-txt"><textarea style name="" id="facetoface" cols="30" rows="10">javascript:(() => {const inputFile = document.createElement('input');inputFile.setAttribute('type', 'file');const inputStyle = `font-size:16px; padding:4px 10px; width:120px; margin-right:10px; border:1px solid #333; border-radius:4px; background-color:#f1f4f7;`;const inputPosition = document.createElement('input');inputPosition.setAttribute('style', inputStyle);inputPosition.setAttribute('type', 'text');inputPosition.setAttribute('placeholder', 'Background Position (e.g., center top)');inputPosition.setAttribute('value', 'center top');const inputSize = document.createElement('input');inputSize.setAttribute('style', inputStyle);inputSize.setAttribute('type', 'text');inputSize.setAttribute('placeholder', 'Background Size (e.g., cover)');inputSize.setAttribute('value', '100% auto');const buttonStyle = `font-size:15px; padding:4px 10px; width:60px; font-weight:bold; border-radius:4px; color:#fff; background-color:#bd0707;`;const applyButton = document.createElement('button');applyButton.setAttribute('style', buttonStyle);applyButton.textContent = '적용';const closeStyle = `width:24px; height:24px; margin-left:10px; display:inline-block; vertical-align:-7px; background-color:#fff;`;const closeButton = document.createElement('button');closeButton.setAttribute('style', closeStyle);closeButton.innerHTML = `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAAAXNSR0IArs4c6QAAA5tJREFUWEftl09oHHUUx7/fmU02eKhi1aqZreYgilXaQytS0Z0NtVAPUqEBIYqz21IErb3Y9lJqQJSql5WCBzGbNS0KltZj8BCzG1ERC4otxdq0hs5uTBFbZEtLm53fk0kyodns/NsEySFzG+a99/v8vu/33rwfsQwfLkMmrEBFzcqKUv+LUpeezz3IutpA0e4TqDs14DIo9vWOVaceGTpyMypEo13s9J3ftifZcaP2OsFeATYSC4tFIDURDmlg3igXfowLFwtqwrS2O4I8yYciLyQ4WVdtbz783ad/RfWJBCUAK6a1H4L3SWpRg8/ZiUwoYPvacvHnKL6RoGwz+xGBt2cCqjERrYuEHrqAyEWABoh2gboGxc2p0eLpML9QqEraehXkoBtIgF+Q1LZoN52tCnKU0BJ+C4jI2fZEoruunKdF4SsXDMA4dGejMTz4TxBYINSfpnVXm+ACyLsF+JW6s8ULWElbPUL5ohmYAL87Tlu3d47sdG4bob4GmYTwE6NceKNlKDtjfUjhvmmVZne+Zvizy17Aqmm93KiYr53w2EzKZUoU1qVGi+f9wHyVkp4evfL3HZOEdo/nLCLnHNWeub2SKmZ2h0B96SrWqJDr56Poe0Zp4GBsKDuTTVNQanT0AwPUO3UnuXUesG+K1Rmj9PmT8aFM6wDBw80cm6VIzL4ES331eamdS9nCKMkprrr3+0KtWXzf9FXT2Y+FeCuguhak0rMNKgLPhuRjnSOFc7GgKuZrRwHtlcCeouSEMVrccbtNxdxlQOpj05UW8FDDM53fDvwQEyqbB7DXV6mGsp8HFtAu5ux051FjePCPWFD2cjxTl7p3PqcpVV5QfU0Ucs8QKIciV5/Ib0a5uD529Qn6tGp6fALkmrk+5QPkdfam7aJZKinvGiPFQ7GhXIeqmTsskANL3tGhP54q9Y+1BOX++xLCMRKrY/37Gjq/nbFeoMJJtyJJHukcKfi2Ghc0dEqwzVwvIcem1VrslCByUTr0Talv+q8EtovAPjT70U5nPyCxf+a11XlKagJ989pS/5mwNUOVmlVokZMnqgry0pJOnt7Oqpnci0pUnmBX2G5nNyOEOjEF7ukqFSej+EQ6U42Bpm8z12u7KegVjU81u81A5F9QGxJKPjUy8FNUGM8uUvr8go4/u/sBXb+1ntDun7n3cRIa7Kurr5164vjxW3FhlgSq1UXD/BalVFjwVr+vQEVVbkWpqEr9B8UMAkQ9FW25AAAAAElFTkSuQmCC" alt="clsoe" style="width:24px;">`;const container = document.createElement('div');const divStyles = `position:fixed; left:50%; top:20px; padding:20px; transform:translateX(-50%); background-color:#fff; border-radius:14px; box-shadow:0 0 10px rgba(0,0,0,.4); white-space:nowrap; color:#333; z-index:999;`;container.appendChild(inputFile);container.appendChild(inputPosition);container.appendChild(inputSize);container.appendChild(applyButton);container.appendChild(closeButton);container.setAttribute('style', divStyles);document.body.appendChild(container);closeButton.addEventListener('click', () => {container.remove();});applyButton.addEventListener('click', () => {if (inputFile.files && inputFile.files[0]) {const reader = new FileReader();reader.onload = (e) => {let backgroundStyle = `background-image: url('${e.target.result}'); background-repeat:no-repeat; `;const positionValue = inputPosition.value.trim();if (positionValue) {backgroundStyle += ` background-position: ${positionValue};`;}const sizeValue = inputSize.value.trim();if (sizeValue) {backgroundStyle += ` background-size: ${sizeValue};`;}document.documentElement.setAttribute('style', backgroundStyle);};reader.readAsDataURL(inputFile.files[0]);document.body.style.opacity = 0.4;}});})();</textarea></p> -->
+                        <ol class="depth-list type-num">
+                            <li>
+                                <p class="mt0">하단 버튼을 클릭 합니다</p>
+                                <button id="facetoface_btn" style="background-color: #ffffff;border: 0.025rem solid #a9acaa;border-radius: 0.025rem;color: #3d5c6b;cursor: pointer;display: inline-block;font-family: inherit;font-size: .75rem;font-weight: 600;line-height: 1.5rem;min-width: 8rem;padding: 0.75rem;position: relative;text-align: center;">클립보드에 복사</button>
+                                
+                            </li>
+                            <li>
+                                <p>크롬 기준, 오른쪽 상단에서 <img src="//lh3.googleusercontent.com/oLoRPrHJd7m46sWijX6zBWnEnfslP62AxJSwt5Nj0bNbpaYHz2pyscExleiofsH2kQ=w36-h36" style="width:18px !important; height:18px !important;" alt="더보기" data-mime-type="image/png" data-alt-src="https://lh3.googleusercontent.com/oLoRPrHJd7m46sWijX6zBWnEnfslP62AxJSwt5Nj0bNbpaYHz2pyscExleiofsH2kQ=w36-h36"> 더보기를 클릭한 뒤, <strong>북마크</strong> ＞ <strong>북마크 관리자</strong>를 선택합니다.</p>
+                                <p class="info-txt type-ref">단축키 Ctrl + D로 추가하지 않습니다</p>
+                                <img src="./app/assets/img/favor_add1.jpg" alt="북마크 추가 방법">
+                            </li>
+                            <li>
+                                <p>오른쪽 상단에서 더보기 <img src="//lh3.googleusercontent.com/oLoRPrHJd7m46sWijX6zBWnEnfslP62AxJSwt5Nj0bNbpaYHz2pyscExleiofsH2kQ=w36-h36" style="width:18px !important; height:18px !important;" alt="더보기" data-mime-type="image/png" data-alt-src="https://lh3.googleusercontent.com/oLoRPrHJd7m46sWijX6zBWnEnfslP62AxJSwt5Nj0bNbpaYHz2pyscExleiofsH2kQ=w36-h36"> ＞ <strong>새 북마크 추가</strong>를 선택합니다.</p>
+                                <img src="./app/assets/img/favor_add2.jpg" alt="북마크 추가 방법">
+                            </li>
+                            <li>
+                                <p>북마크에 대한 이름을 지정하고, <strong>URL</strong> 입력란에 <strong>복사한 소스를 붙여넣고 저장</strong>합니다.</p>
+                                <img src="./app/assets/img/favor_add3.jpg" alt="북마크 추가 방법">
+                            </li>
+                        </ol>
+                    </section>
+                </div>
+            </article>
+
+                <!--
                 <h2 style="background-color: #f8f8f8">1depth Title</h2>
                 <h3 style="background-color: #f8f8f8">2depth Title</h3>
                 <h4 style="background-color: #f8f8f8">3depth Title</h4>
@@ -34,19 +65,20 @@
                 <span style="background-color: #f8f8f8">text-content</span>
 
                 <div id="cpcv-covers" style="border: 2px dotted #ff0000; padding: 5px"></div>
-            </article>
+            
             <aside id="aside-container">
-                <!-- <ul>
-										<li>
-												<p><strong>reference on A:</strong></p>
-												<p>message</p>
-										</li>
-										<li>
-												<p><strong>In the information:</strong></p>
-												<p>message</p>
-										</li>
-								</ul> -->
+                <ul>
+                    <li>
+                            <p><strong>reference on A:</strong></p>
+                            <p>message</p>
+                    </li>
+                    <li>
+                            <p><strong>In the information:</strong></p>
+                            <p>message</p>
+                    </li>
+            </ul> 
             </aside>
+            -->
             <footer>
                 <span>Copyright 2023 codepartners.</span>
                 <img style="width: 80px" src="res_/img/logo-black.png" alt="codepartners logo" />
